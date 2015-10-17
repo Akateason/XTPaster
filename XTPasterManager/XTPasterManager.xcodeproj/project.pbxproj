@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D76278BA1BD10BAC00C438FC /* UIImage+AddFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D76278B91BD10BAC00C438FC /* UIImage+AddFunction.m */; settings = {ASSET_TAGS = (); }; };
+		D78186361BD1027E00102759 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186351BD1027E00102759 /* main.m */; };
+		D78186391BD1027E00102759 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186381BD1027E00102759 /* AppDelegate.m */; };
+		D781863C1BD1027E00102759 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D781863B1BD1027E00102759 /* ViewController.m */; };
+		D781863F1BD1027E00102759 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D781863D1BD1027E00102759 /* Main.storyboard */; };
+		D78186411BD1027E00102759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78186401BD1027E00102759 /* Assets.xcassets */; };
+		D78186441BD1027E00102759 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78186421BD1027E00102759 /* LaunchScreen.storyboard */; };
+		D781864F1BD1027E00102759 /* XTPasterManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D781864E1BD1027E00102759 /* XTPasterManagerTests.m */; };
+		D781865A1BD1027E00102759 /* XTPasterManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186591BD1027E00102759 /* XTPasterManagerUITests.m */; };
+		D78186691BD1035B00102759 /* PasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186681BD1035B00102759 /* PasterController.m */; settings = {ASSET_TAGS = (); }; };
+		D781866F1BD103F300102759 /* XTPasterStageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D781866C1BD103F300102759 /* XTPasterStageView.m */; settings = {ASSET_TAGS = (); }; };
+		D78186701BD103F300102759 /* XTPasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D781866E1BD103F300102759 /* XTPasterView.m */; settings = {ASSET_TAGS = (); }; };
+		D78186741BD1043200102759 /* PasterChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186721BD1043200102759 /* PasterChooseView.m */; settings = {ASSET_TAGS = (); }; };
+		D78186751BD1043200102759 /* PasterChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78186731BD1043200102759 /* PasterChooseView.xib */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D781864B1BD1027E00102759 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D78186291BD1027E00102759 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D78186301BD1027E00102759;
+			remoteInfo = XTPasterManager;
+		};
+		D78186561BD1027E00102759 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D78186291BD1027E00102759 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D78186301BD1027E00102759;
+			remoteInfo = XTPasterManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D76278B81BD10BAC00C438FC /* UIImage+AddFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AddFunction.h"; sourceTree = "<group>"; };
+		D76278B91BD10BAC00C438FC /* UIImage+AddFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AddFunction.m"; sourceTree = "<group>"; };
+		D78186311BD1027E00102759 /* XTPasterManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTPasterManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D78186351BD1027E00102759 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D78186371BD1027E00102759 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D78186381BD1027E00102759 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D781863A1BD1027E00102759 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D781863B1BD1027E00102759 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D781863E1BD1027E00102759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D78186401BD1027E00102759 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D78186431BD1027E00102759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D78186451BD1027E00102759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D781864A1BD1027E00102759 /* XTPasterManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTPasterManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D781864E1BD1027E00102759 /* XTPasterManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTPasterManagerTests.m; sourceTree = "<group>"; };
+		D78186501BD1027E00102759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D78186551BD1027E00102759 /* XTPasterManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTPasterManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D78186591BD1027E00102759 /* XTPasterManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTPasterManagerUITests.m; sourceTree = "<group>"; };
+		D781865B1BD1027E00102759 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D78186671BD1035B00102759 /* PasterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasterController.h; sourceTree = "<group>"; };
+		D78186681BD1035B00102759 /* PasterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasterController.m; sourceTree = "<group>"; };
+		D781866B1BD103F300102759 /* XTPasterStageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPasterStageView.h; sourceTree = "<group>"; };
+		D781866C1BD103F300102759 /* XTPasterStageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTPasterStageView.m; sourceTree = "<group>"; };
+		D781866D1BD103F300102759 /* XTPasterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPasterView.h; sourceTree = "<group>"; };
+		D781866E1BD103F300102759 /* XTPasterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTPasterView.m; sourceTree = "<group>"; };
+		D78186711BD1043200102759 /* PasterChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasterChooseView.h; sourceTree = "<group>"; };
+		D78186721BD1043200102759 /* PasterChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasterChooseView.m; sourceTree = "<group>"; };
+		D78186731BD1043200102759 /* PasterChooseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasterChooseView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D781862E1BD1027E00102759 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78186471BD1027E00102759 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78186521BD1027E00102759 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D76278BB1BD10DB200C438FC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D76278B81BD10BAC00C438FC /* UIImage+AddFunction.h */,
+				D76278B91BD10BAC00C438FC /* UIImage+AddFunction.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		D78186281BD1027E00102759 = {
+			isa = PBXGroup;
+			children = (
+				D78186331BD1027E00102759 /* XTPasterManager */,
+				D781864D1BD1027E00102759 /* XTPasterManagerTests */,
+				D78186581BD1027E00102759 /* XTPasterManagerUITests */,
+				D78186321BD1027E00102759 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D78186321BD1027E00102759 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D78186311BD1027E00102759 /* XTPasterManager.app */,
+				D781864A1BD1027E00102759 /* XTPasterManagerTests.xctest */,
+				D78186551BD1027E00102759 /* XTPasterManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D78186331BD1027E00102759 /* XTPasterManager */ = {
+			isa = PBXGroup;
+			children = (
+				D78186371BD1027E00102759 /* AppDelegate.h */,
+				D78186381BD1027E00102759 /* AppDelegate.m */,
+				D781863A1BD1027E00102759 /* ViewController.h */,
+				D781863B1BD1027E00102759 /* ViewController.m */,
+				D78186671BD1035B00102759 /* PasterController.h */,
+				D78186681BD1035B00102759 /* PasterController.m */,
+				D78186711BD1043200102759 /* PasterChooseView.h */,
+				D78186721BD1043200102759 /* PasterChooseView.m */,
+				D78186731BD1043200102759 /* PasterChooseView.xib */,
+				D76278BB1BD10DB200C438FC /* Util */,
+				D781866A1BD103F300102759 /* Paster */,
+				D781863D1BD1027E00102759 /* Main.storyboard */,
+				D78186401BD1027E00102759 /* Assets.xcassets */,
+				D78186421BD1027E00102759 /* LaunchScreen.storyboard */,
+				D78186451BD1027E00102759 /* Info.plist */,
+				D78186341BD1027E00102759 /* Supporting Files */,
+			);
+			path = XTPasterManager;
+			sourceTree = "<group>";
+		};
+		D78186341BD1027E00102759 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D78186351BD1027E00102759 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D781864D1BD1027E00102759 /* XTPasterManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D781864E1BD1027E00102759 /* XTPasterManagerTests.m */,
+				D78186501BD1027E00102759 /* Info.plist */,
+			);
+			path = XTPasterManagerTests;
+			sourceTree = "<group>";
+		};
+		D78186581BD1027E00102759 /* XTPasterManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D78186591BD1027E00102759 /* XTPasterManagerUITests.m */,
+				D781865B1BD1027E00102759 /* Info.plist */,
+			);
+			path = XTPasterManagerUITests;
+			sourceTree = "<group>";
+		};
+		D781866A1BD103F300102759 /* Paster */ = {
+			isa = PBXGroup;
+			children = (
+				D781866B1BD103F300102759 /* XTPasterStageView.h */,
+				D781866C1BD103F300102759 /* XTPasterStageView.m */,
+				D781866D1BD103F300102759 /* XTPasterView.h */,
+				D781866E1BD103F300102759 /* XTPasterView.m */,
+			);
+			path = Paster;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D78186301BD1027E00102759 /* XTPasterManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D781865E1BD1027E00102759 /* Build configuration list for PBXNativeTarget "XTPasterManager" */;
+			buildPhases = (
+				D781862D1BD1027E00102759 /* Sources */,
+				D781862E1BD1027E00102759 /* Frameworks */,
+				D781862F1BD1027E00102759 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XTPasterManager;
+			productName = XTPasterManager;
+			productReference = D78186311BD1027E00102759 /* XTPasterManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D78186491BD1027E00102759 /* XTPasterManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D78186611BD1027E00102759 /* Build configuration list for PBXNativeTarget "XTPasterManagerTests" */;
+			buildPhases = (
+				D78186461BD1027E00102759 /* Sources */,
+				D78186471BD1027E00102759 /* Frameworks */,
+				D78186481BD1027E00102759 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D781864C1BD1027E00102759 /* PBXTargetDependency */,
+			);
+			name = XTPasterManagerTests;
+			productName = XTPasterManagerTests;
+			productReference = D781864A1BD1027E00102759 /* XTPasterManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D78186541BD1027E00102759 /* XTPasterManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D78186641BD1027E00102759 /* Build configuration list for PBXNativeTarget "XTPasterManagerUITests" */;
+			buildPhases = (
+				D78186511BD1027E00102759 /* Sources */,
+				D78186521BD1027E00102759 /* Frameworks */,
+				D78186531BD1027E00102759 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D78186571BD1027E00102759 /* PBXTargetDependency */,
+			);
+			name = XTPasterManagerUITests;
+			productName = XTPasterManagerUITests;
+			productReference = D78186551BD1027E00102759 /* XTPasterManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D78186291BD1027E00102759 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = teason;
+				TargetAttributes = {
+					D78186301BD1027E00102759 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					D78186491BD1027E00102759 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = D78186301BD1027E00102759;
+					};
+					D78186541BD1027E00102759 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = D78186301BD1027E00102759;
+					};
+				};
+			};
+			buildConfigurationList = D781862C1BD1027E00102759 /* Build configuration list for PBXProject "XTPasterManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D78186281BD1027E00102759;
+			productRefGroup = D78186321BD1027E00102759 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D78186301BD1027E00102759 /* XTPasterManager */,
+				D78186491BD1027E00102759 /* XTPasterManagerTests */,
+				D78186541BD1027E00102759 /* XTPasterManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D781862F1BD1027E00102759 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78186751BD1043200102759 /* PasterChooseView.xib in Resources */,
+				D78186441BD1027E00102759 /* LaunchScreen.storyboard in Resources */,
+				D78186411BD1027E00102759 /* Assets.xcassets in Resources */,
+				D781863F1BD1027E00102759 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78186481BD1027E00102759 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78186531BD1027E00102759 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D781862D1BD1027E00102759 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D78186691BD1035B00102759 /* PasterController.m in Sources */,
+				D781863C1BD1027E00102759 /* ViewController.m in Sources */,
+				D78186391BD1027E00102759 /* AppDelegate.m in Sources */,
+				D76278BA1BD10BAC00C438FC /* UIImage+AddFunction.m in Sources */,
+				D78186701BD103F300102759 /* XTPasterView.m in Sources */,
+				D78186361BD1027E00102759 /* main.m in Sources */,
+				D781866F1BD103F300102759 /* XTPasterStageView.m in Sources */,
+				D78186741BD1043200102759 /* PasterChooseView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78186461BD1027E00102759 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D781864F1BD1027E00102759 /* XTPasterManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78186511BD1027E00102759 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D781865A1BD1027E00102759 /* XTPasterManagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D781864C1BD1027E00102759 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D78186301BD1027E00102759 /* XTPasterManager */;
+			targetProxy = D781864B1BD1027E00102759 /* PBXContainerItemProxy */;
+		};
+		D78186571BD1027E00102759 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D78186301BD1027E00102759 /* XTPasterManager */;
+			targetProxy = D78186561BD1027E00102759 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D781863D1BD1027E00102759 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D781863E1BD1027E00102759 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D78186421BD1027E00102759 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D78186431BD1027E00102759 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D781865C1BD1027E00102759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D781865D1BD1027E00102759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D781865F1BD1027E00102759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XTPasterManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zzz.XTPasterManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D78186601BD1027E00102759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XTPasterManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zzz.XTPasterManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D78186621BD1027E00102759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = XTPasterManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zzz.XTPasterManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XTPasterManager.app/XTPasterManager";
+			};
+			name = Debug;
+		};
+		D78186631BD1027E00102759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = XTPasterManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zzz.XTPasterManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XTPasterManager.app/XTPasterManager";
+			};
+			name = Release;
+		};
+		D78186651BD1027E00102759 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = XTPasterManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zzz.XTPasterManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XTPasterManager;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D78186661BD1027E00102759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = XTPasterManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zzz.XTPasterManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XTPasterManager;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D781862C1BD1027E00102759 /* Build configuration list for PBXProject "XTPasterManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D781865C1BD1027E00102759 /* Debug */,
+				D781865D1BD1027E00102759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D781865E1BD1027E00102759 /* Build configuration list for PBXNativeTarget "XTPasterManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D781865F1BD1027E00102759 /* Debug */,
+				D78186601BD1027E00102759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D78186611BD1027E00102759 /* Build configuration list for PBXNativeTarget "XTPasterManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78186621BD1027E00102759 /* Debug */,
+				D78186631BD1027E00102759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D78186641BD1027E00102759 /* Build configuration list for PBXNativeTarget "XTPasterManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78186651BD1027E00102759 /* Debug */,
+				D78186661BD1027E00102759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D78186291BD1027E00102759 /* Project object */;
+}

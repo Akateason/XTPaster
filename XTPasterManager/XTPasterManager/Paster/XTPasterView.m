@@ -139,24 +139,29 @@
                 finalHeight = PASTER_SLIDE*(1-0.5) ;
             }
             
-            self.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y,finalWidth,finalHeight);
+            self.bounds = CGRectMake(self.bounds.origin.x,
+                                     self.bounds.origin.y,
+                                     finalWidth,
+                                     finalHeight) ;
             
-            self.resizingControl.frame = CGRectMake(self.bounds.size.width-BT_SLIDE,
-                                                   self.bounds.size.height-BT_SLIDE,
-                                                   BT_SLIDE, BT_SLIDE);
+            self.resizingControl.frame = CGRectMake(self.bounds.size.width-BT_SLIDE  ,
+                                                    self.bounds.size.height-BT_SLIDE ,
+                                                    BT_SLIDE ,
+                                                    BT_SLIDE) ;
             
-            self.prevPoint = [recognizer locationOfTouch:0 inView:self];
+            self.prevPoint = [recognizer locationOfTouch:0
+                                                  inView:self] ;
         }
         
         /* Rotation */
         float ang = atan2([recognizer locationInView:self.superview].y - self.center.y,
-                          [recognizer locationInView:self.superview].x - self.center.x);
+                          [recognizer locationInView:self.superview].x - self.center.x) ;
         
-        float angleDiff = self.deltaAngle - ang;
+        float angleDiff = self.deltaAngle - ang ;
 
-        self.transform = CGAffineTransformMakeRotation(-angleDiff);
+        self.transform = CGAffineTransformMakeRotation(-angleDiff) ;
         
-        [self setNeedsDisplay];
+        [self setNeedsDisplay] ;
     }
     else if ([recognizer state] == UIGestureRecognizerStateEnded)
     {
@@ -192,11 +197,11 @@
     
     self.userInteractionEnabled = YES ;
     
-    self.minWidth   = self.bounds.size.width*0.5;
-    self.minHeight  = self.bounds.size.height*0.5;
+    self.minWidth   = self.bounds.size.width * 0.5;
+    self.minHeight  = self.bounds.size.height * 0.5;
   
     self.deltaAngle = atan2(self.frame.origin.y+self.frame.size.height - self.center.y,
-                            self.frame.origin.x+self.frame.size.width - self.center.x);
+                            self.frame.origin.x+self.frame.size.width - self.center.x) ;
 
 }
 
@@ -212,7 +217,9 @@
     self.isOnFirst = YES ;
     [self.delegate makePasterBecomeFirstRespond:self.pasterID] ;
     
-    self.imgContentView.transform = CGAffineTransformScale(self.imgContentView.transform, pinchGesture.scale, pinchGesture.scale) ;
+    self.imgContentView.transform = CGAffineTransformScale(self.imgContentView.transform,
+                                                           pinchGesture.scale,
+                                                           pinchGesture.scale) ;
     pinchGesture.scale = 1 ;
 }
 
@@ -230,8 +237,8 @@
     self.isOnFirst = YES ;
     [self.delegate makePasterBecomeFirstRespond:self.pasterID] ;
 
-    UITouch *touch = [touches anyObject];
-    self.touchStart = [touch locationInView:self.superview];
+    UITouch *touch = [touches anyObject] ;
+    self.touchStart = [touch locationInView:self.superview] ;
 }
 
 - (void)translateUsingTouchLocation:(CGPoint)touchPoint
@@ -323,7 +330,11 @@
 {
     if (!_resizingControl)
     {
-        _resizingControl = [[UIImageView alloc]initWithFrame:CGRectMake(self.frame.size.width - BT_SLIDE , self.frame.size.height - BT_SLIDE , BT_SLIDE , BT_SLIDE)];
+        _resizingControl = [[UIImageView alloc]initWithFrame:CGRectMake(self.frame.size.width - BT_SLIDE  ,
+                                                                        self.frame.size.height - BT_SLIDE ,
+                                                                        BT_SLIDE ,
+                                                                        BT_SLIDE)
+                            ] ;
         _resizingControl.userInteractionEnabled = YES;
         _resizingControl.image = [UIImage imageNamed:@"bt_paster_transform"] ;
 

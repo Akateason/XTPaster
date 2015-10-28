@@ -10,8 +10,7 @@
 #import "XTPasterView.h"
 #import "UIImage+AddFunction.h"
 
-#define APPFRAME        [UIScreen mainScreen].bounds
-
+#define APPFRAME    [UIScreen mainScreen].bounds
 
 @interface XTPasterStageView () <XTPasterViewDelegate>
 {
@@ -19,10 +18,12 @@
     CGPoint         touchPoint ;
     NSMutableArray  *m_listPaster ;
 }
+
 @property (nonatomic,strong) UIButton       *bgButton ;
 @property (nonatomic,strong) UIImageView    *imgView ;
-@property (nonatomic,strong) XTPasterView     *pasterCurrent ;
+@property (nonatomic,strong) XTPasterView   *pasterCurrent ;
 @property (nonatomic)        int            newPasterID ;
+
 @end
 
 @implementation XTPasterStageView
@@ -54,7 +55,9 @@
         _bgButton = [[UIButton alloc] initWithFrame:self.frame] ;
         _bgButton.tintColor = nil ;
         _bgButton.backgroundColor = nil ;
-        [_bgButton addTarget:self action:@selector(backgroundClicked:) forControlEvents:UIControlEventTouchUpInside] ;
+        [_bgButton addTarget:self
+                      action:@selector(backgroundClicked:)
+            forControlEvents:UIControlEventTouchUpInside] ;
         if (![_bgButton superview]) {
             [self addSubview:_bgButton] ;
         }
@@ -98,14 +101,13 @@
     return self;
 }
 
-
 #pragma mark - public
 - (void)addPasterWithImg:(UIImage *)imgP
 {
     [self clearAllOnFirst] ;
     self.pasterCurrent = [[XTPasterView alloc] initWithBgView:self
-                                                   pasterID:self.newPasterID
-                                                        img:imgP] ;
+                                                     pasterID:self.newPasterID
+                                                          img:imgP] ;
     _pasterCurrent.delegate = self ;
     [m_listPaster addObject:_pasterCurrent] ;
 }
@@ -114,8 +116,6 @@
 {
     NSLog(@"done") ;
     [self clearAllOnFirst] ;
-    
-    
     
     NSLog(@"self.originImage.size : %@",NSStringFromCGSize(self.originImage.size)) ;
     CGFloat org_width = self.originImage.size.width ;

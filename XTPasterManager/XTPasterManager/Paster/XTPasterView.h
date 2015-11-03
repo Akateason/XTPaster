@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "XTPasterStageView.h"
+
 @class XTPasterView ;
 
 @protocol XTPasterViewDelegate <NSObject>
@@ -16,6 +17,7 @@
 @end
 
 @interface XTPasterView : UIView
+
 @property (nonatomic,strong)    UIImage *imagePaster ;
 @property (nonatomic)           int     pasterID ;
 @property (nonatomic)           BOOL    isOnFirst ;
@@ -24,4 +26,5 @@
                       pasterID:(int)pasterID
                            img:(UIImage *)img ;
 - (void)remove ;
+
 @end

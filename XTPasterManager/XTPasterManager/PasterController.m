@@ -32,6 +32,7 @@ static const CGFloat width_pasterChoose = 110.0f ;
     
     if (!image) return ;
     
+    //在这里 添加 贴纸
     [_stageView addPasterWithImg:image] ;
 }
 

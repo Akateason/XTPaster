@@ -33,7 +33,6 @@
 
 @implementation XTPasterView
 
-
 - (void)remove
 {
     [self removeFromSuperview] ;

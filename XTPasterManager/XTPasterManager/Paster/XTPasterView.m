@@ -16,20 +16,18 @@
 
 
 @interface XTPasterView ()
+{
+    CGFloat minWidth;
+    CGFloat minHeight;
+    CGFloat deltaAngle;
+    CGPoint prevPoint;
+    CGPoint touchStart;
+    CGRect  bgRect ;
+}
 
 @property (nonatomic,strong) UIImageView    *imgContentView ;
 @property (nonatomic,strong) UIImageView    *btDelete ;
-
-@property (nonatomic,strong) UIImageView    *resizingControl;
-
-@property (nonatomic) CGFloat minWidth;
-@property (nonatomic) CGFloat minHeight;
-@property (nonatomic) CGFloat deltaAngle;
-@property (nonatomic) CGPoint prevPoint;
-
-@property (nonatomic) CGPoint touchStart;
-
-@property (nonatomic) CGRect bgRect ;
+@property (nonatomic,strong) UIImageView    *btSizeCtrl ;
 
 @end
 
@@ -53,12 +51,12 @@
         self.pasterID = pasterID ;
         self.imagePaster = img ;
         
-        self.bgRect = bgView.frame ;
+        bgRect = bgView.frame ;
         
-        [self setupWithBGFrame:self.bgRect] ;
+        [self setupWithBGFrame:bgRect] ;
         [self imgContentView] ;
         [self btDelete] ;
-        [self resizingControl] ;
+        [self btSizeCtrl] ;
         [bgView addSubview:self] ;
         self.isOnFirst = YES ;
     }
@@ -84,23 +82,23 @@
 {
     if ([recognizer state] == UIGestureRecognizerStateBegan)
     {
-        self.prevPoint = [recognizer locationInView:self];
+        prevPoint = [recognizer locationInView:self];
         [self setNeedsDisplay];
     }
     else if ([recognizer state] == UIGestureRecognizerStateChanged)
     {
         // preventing from the picture being shrinked too far by resizing
-        if (self.bounds.size.width < self.minWidth || self.bounds.size.height < self.minHeight)
+        if (self.bounds.size.width < minWidth || self.bounds.size.height < minHeight)
         {
             self.bounds = CGRectMake(self.bounds.origin.x,
                                      self.bounds.origin.y,
-                                     self.minWidth + 1 ,
-                                     self.minHeight + 1);
-            self.resizingControl.frame =CGRectMake(self.bounds.size.width-BT_SLIDE,
+                                     minWidth + 1 ,
+                                     minHeight + 1);
+            self.btSizeCtrl.frame =CGRectMake(self.bounds.size.width-BT_SLIDE,
                                                    self.bounds.size.height-BT_SLIDE,
                                                    BT_SLIDE,
                                                    BT_SLIDE);
-            self.prevPoint = [recognizer locationInView:self];
+            prevPoint = [recognizer locationInView:self];
         }
         // Resizing
         else
@@ -108,14 +106,14 @@
             CGPoint point = [recognizer locationInView:self];
             float wChange = 0.0, hChange = 0.0;
             
-            wChange = (point.x - self.prevPoint.x);
+            wChange = (point.x - prevPoint.x);
             float wRatioChange = (wChange/(float)self.bounds.size.width);
             
             hChange = wRatioChange * self.bounds.size.height;
             
             if (ABS(wChange) > 50.0f || ABS(hChange) > 50.0f)
             {
-                self.prevPoint = [recognizer locationOfTouch:0 inView:self];
+                prevPoint = [recognizer locationOfTouch:0 inView:self];
                 return;
             }
             
@@ -144,12 +142,12 @@
                                      finalWidth,
                                      finalHeight) ;
             
-            self.resizingControl.frame = CGRectMake(self.bounds.size.width-BT_SLIDE  ,
+            self.btSizeCtrl.frame = CGRectMake(self.bounds.size.width-BT_SLIDE  ,
                                                     self.bounds.size.height-BT_SLIDE ,
                                                     BT_SLIDE ,
                                                     BT_SLIDE) ;
             
-            self.prevPoint = [recognizer locationOfTouch:0
+            prevPoint = [recognizer locationOfTouch:0
                                                   inView:self] ;
         }
         
@@ -157,7 +155,7 @@
         float ang = atan2([recognizer locationInView:self.superview].y - self.center.y,
                           [recognizer locationInView:self.superview].x - self.center.x) ;
         
-        float angleDiff = self.deltaAngle - ang ;
+        float angleDiff = deltaAngle - ang ;
 
         self.transform = CGAffineTransformMakeRotation(-angleDiff) ;
         
@@ -165,7 +163,7 @@
     }
     else if ([recognizer state] == UIGestureRecognizerStateEnded)
     {
-        self.prevPoint = [recognizer locationInView:self];
+        prevPoint = [recognizer locationInView:self];
         [self setNeedsDisplay];
     }
 }
@@ -197,11 +195,11 @@
     
     self.userInteractionEnabled = YES ;
     
-    self.minWidth   = self.bounds.size.width * 0.5;
-    self.minHeight  = self.bounds.size.height * 0.5;
+    minWidth   = self.bounds.size.width * 0.5;
+    minHeight  = self.bounds.size.height * 0.5;
   
-    self.deltaAngle = atan2(self.frame.origin.y+self.frame.size.height - self.center.y,
-                            self.frame.origin.x+self.frame.size.width - self.center.x) ;
+    deltaAngle = atan2(self.frame.origin.y+self.frame.size.height - self.center.y,
+                       self.frame.origin.x+self.frame.size.width - self.center.x) ;
 
 }
 
@@ -238,13 +236,13 @@
     [self.delegate makePasterBecomeFirstRespond:self.pasterID] ;
 
     UITouch *touch = [touches anyObject] ;
-    self.touchStart = [touch locationInView:self.superview] ;
+    touchStart = [touch locationInView:self.superview] ;
 }
 
 - (void)translateUsingTouchLocation:(CGPoint)touchPoint
 {
-    CGPoint newCenter = CGPointMake(self.center.x + touchPoint.x - self.touchStart.x,
-                                    self.center.y + touchPoint.y - self.touchStart.y) ;
+    CGPoint newCenter = CGPointMake(self.center.x + touchPoint.x - touchStart.x,
+                                    self.center.y + touchPoint.y - touchStart.y) ;
     
     // Ensure the translation won't cause the view to move offscreen. BEGIN
     CGFloat midPointX = CGRectGetMidX(self.bounds) ;
@@ -274,7 +272,7 @@
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     CGPoint touchLocation = [[touches anyObject] locationInView:self];
-    if (CGRectContainsPoint(self.resizingControl.frame, touchLocation)) {
+    if (CGRectContainsPoint(self.btSizeCtrl.frame, touchLocation)) {
         return;
     }
     
@@ -282,7 +280,7 @@
     
     [self translateUsingTouchLocation:touch] ;
     
-    self.touchStart = touch;
+    touchStart = touch;
 }
 
 #pragma mark -- Properties
@@ -291,7 +289,7 @@
     _isOnFirst = isOnFirst ;
     
     self.btDelete.hidden = !isOnFirst ;
-    self.resizingControl.hidden = !isOnFirst ;
+    self.btSizeCtrl.hidden = !isOnFirst ;
     self.imgContentView.layer.borderWidth = isOnFirst ? BORDER_LINE_WIDTH : 0.0f ;
     
     if (isOnFirst)
@@ -311,10 +309,8 @@
         
         _imgContentView = [[UIImageView alloc] initWithFrame:rect] ;
         _imgContentView.backgroundColor = nil ;
-        
         _imgContentView.layer.borderColor = [UIColor whiteColor].CGColor ;
         _imgContentView.layer.borderWidth = BORDER_LINE_WIDTH ;
-        
         _imgContentView.contentMode = UIViewContentModeScaleAspectFit ;
         
         if (![_imgContentView superview])
@@ -326,30 +322,28 @@
     return _imgContentView ;
 }
 
-- (UIImageView *)resizingControl
+- (UIImageView *)btSizeCtrl
 {
-    if (!_resizingControl)
+    if (!_btSizeCtrl)
     {
-        _resizingControl = [[UIImageView alloc]initWithFrame:CGRectMake(self.frame.size.width - BT_SLIDE  ,
+        _btSizeCtrl = [[UIImageView alloc]initWithFrame:CGRectMake(self.frame.size.width - BT_SLIDE  ,
                                                                         self.frame.size.height - BT_SLIDE ,
                                                                         BT_SLIDE ,
                                                                         BT_SLIDE)
                             ] ;
-        _resizingControl.userInteractionEnabled = YES;
-        _resizingControl.image = [UIImage imageNamed:@"bt_paster_transform"] ;
+        _btSizeCtrl.userInteractionEnabled = YES;
+        _btSizeCtrl.image = [UIImage imageNamed:@"bt_paster_transform"] ;
 
         UIPanGestureRecognizer *panResizeGesture = [[UIPanGestureRecognizer alloc]
                                                     initWithTarget:self
                                                     action:@selector(resizeTranslate:)] ;
-        
-        [_resizingControl addGestureRecognizer:panResizeGesture] ;
-       
-        if (![_resizingControl superview]) {
-            [self addSubview:_resizingControl] ;
+        [_btSizeCtrl addGestureRecognizer:panResizeGesture] ;
+        if (![_btSizeCtrl superview]) {
+            [self addSubview:_btSizeCtrl] ;
         }
     }
     
-    return _resizingControl ;
+    return _btSizeCtrl ;
 }
 
 - (UIImageView *)btDelete

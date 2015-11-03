@@ -114,10 +114,10 @@
 
 - (UIImage *)doneEdit
 {
-    NSLog(@"done") ;
+//    NSLog(@"done") ;
     [self clearAllOnFirst] ;
     
-    NSLog(@"self.originImage.size : %@",NSStringFromCGSize(self.originImage.size)) ;
+//    NSLog(@"self.originImage.size : %@",NSStringFromCGSize(self.originImage.size)) ;
     CGFloat org_width = self.originImage.size.width ;
     CGFloat org_heigh = self.originImage.size.height ;
     CGFloat rateOfScreen = org_width / org_heigh ;
@@ -128,7 +128,7 @@
     rect.origin = CGPointMake(0, (self.frame.size.height - inScreenH) / 2) ;
     
     UIImage *imgTemp = [UIImage getImageFromView:self] ;
-    NSLog(@"imgTemp.size : %@",NSStringFromCGSize(imgTemp.size)) ;
+//    NSLog(@"imgTemp.size : %@",NSStringFromCGSize(imgTemp.size)) ;
     
     UIImage *imgCut = [UIImage squareImageFromImage:imgTemp scaledToSize:rect.size.width] ;
     
@@ -147,41 +147,36 @@
 {
     _pasterCurrent.isOnFirst = NO ;
     
-    for (XTPasterView *pasterV in m_listPaster)
-    {
-        pasterV.isOnFirst = NO ;
-    }
+    [m_listPaster enumerateObjectsUsingBlock:^(XTPasterView *pasterV, NSUInteger idx, BOOL * _Nonnull stop) {
+         pasterV.isOnFirst = NO ;
+    }] ;
 }
 
 #pragma mark - PasterViewDelegate
 - (void)makePasterBecomeFirstRespond:(int)pasterID ;
 {
-    for (XTPasterView *pasterV in m_listPaster)
-    {
+    [m_listPaster enumerateObjectsUsingBlock:^(XTPasterView *pasterV, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        pasterV.isOnFirst = NO ;
+
         if (pasterV.pasterID == pasterID)
         {
             self.pasterCurrent = pasterV ;
             pasterV.isOnFirst = YES ;
-            continue ;
         }
         
-        pasterV.isOnFirst = NO ;
-    }
+    }] ;
 }
 
 - (void)removePaster:(int)pasterID
 {
-    int index = 0 ;
-    for (XTPasterView *pasterV in m_listPaster)
-    {
+    [m_listPaster enumerateObjectsUsingBlock:^(XTPasterView *pasterV, NSUInteger idx, BOOL * _Nonnull stop) {
         if (pasterV.pasterID == pasterID)
         {
-            [m_listPaster removeObjectAtIndex:index] ;
-            break ;
+            [m_listPaster removeObjectAtIndex:idx] ;
+            *stop = YES ;
         }
-        
-        index++ ;
-    }
+    }] ;
 }
 
 @end

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D76278BA1BD10BAC00C438FC /* UIImage+AddFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D76278B91BD10BAC00C438FC /* UIImage+AddFunction.m */; settings = {ASSET_TAGS = (); }; };
+		D76278BA1BD10BAC00C438FC /* UIImage+AddFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = D76278B91BD10BAC00C438FC /* UIImage+AddFunction.m */; };
 		D78186361BD1027E00102759 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186351BD1027E00102759 /* main.m */; };
 		D78186391BD1027E00102759 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186381BD1027E00102759 /* AppDelegate.m */; };
 		D781863C1BD1027E00102759 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D781863B1BD1027E00102759 /* ViewController.m */; };
@@ -16,11 +16,11 @@
 		D78186441BD1027E00102759 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D78186421BD1027E00102759 /* LaunchScreen.storyboard */; };
 		D781864F1BD1027E00102759 /* XTPasterManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D781864E1BD1027E00102759 /* XTPasterManagerTests.m */; };
 		D781865A1BD1027E00102759 /* XTPasterManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186591BD1027E00102759 /* XTPasterManagerUITests.m */; };
-		D78186691BD1035B00102759 /* PasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186681BD1035B00102759 /* PasterController.m */; settings = {ASSET_TAGS = (); }; };
-		D781866F1BD103F300102759 /* XTPasterStageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D781866C1BD103F300102759 /* XTPasterStageView.m */; settings = {ASSET_TAGS = (); }; };
-		D78186701BD103F300102759 /* XTPasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D781866E1BD103F300102759 /* XTPasterView.m */; settings = {ASSET_TAGS = (); }; };
-		D78186741BD1043200102759 /* PasterChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186721BD1043200102759 /* PasterChooseView.m */; settings = {ASSET_TAGS = (); }; };
-		D78186751BD1043200102759 /* PasterChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78186731BD1043200102759 /* PasterChooseView.xib */; settings = {ASSET_TAGS = (); }; };
+		D78186691BD1035B00102759 /* PasterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186681BD1035B00102759 /* PasterController.m */; };
+		D781866F1BD103F300102759 /* XTPasterStageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D781866C1BD103F300102759 /* XTPasterStageView.m */; };
+		D78186701BD103F300102759 /* XTPasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D781866E1BD103F300102759 /* XTPasterView.m */; };
+		D78186741BD1043200102759 /* PasterChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D78186721BD1043200102759 /* PasterChooseView.m */; };
+		D78186751BD1043200102759 /* PasterChooseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D78186731BD1043200102759 /* PasterChooseView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,6 +251,7 @@
 				TargetAttributes = {
 					D78186301BD1027E00102759 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 5D74XHX7AD;
 					};
 					D78186491BD1027E00102759 = {
 						CreatedOnToolsVersion = 7.0;
@@ -463,9 +464,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5D74XHX7AD;
 				INFOPLIST_FILE = XTPasterManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zzz.XTPasterManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teason.XTPasterManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -474,9 +476,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5D74XHX7AD;
 				INFOPLIST_FILE = XTPasterManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zzz.XTPasterManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teason.XTPasterManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
